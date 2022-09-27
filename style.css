@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.container {
+    width: 400px;
+    height: auto;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: rgb(221, 198, 27);
+}
+
+.container .button {
+    color: white;
+    border-bottom: solid 1px rgb(27, 27, 47);
+    border-top: solid 1px rgb(50, 85, 128);
+    position: relative;
+    display: block;
+    padding: 1rem;
+    font-size: 25px;
+}
+
+.container .content {
+    overflow: hidden;
+    max-height: 0;
+    background: rgb(12, 85, 117);
+}
+
+.container .content a {
+    font-size: 25px;
+    color: white;
+    display: block;
+    padding: 15px;
+    position: relative;
+}
+
+.container .content a::before {
+    height: 100%;
+    width: 5px;
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.container .content a:hover {
+    padding-left: calc(1rem + 5px);
+}
+
+.dropmenu:target .content {
+    max-height: 20rem;
+}
